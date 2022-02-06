@@ -21,3 +21,8 @@
 .simple-keyboard.dark-theme .hg-row .hg-button:not(:last-child) {
   margin-right: 1px;
 }
+
+.simple-keyboard.dark-theme .disabled-input {
+  background: rgb(231, 45, 45);
+  cursor: not-allowed;
+}

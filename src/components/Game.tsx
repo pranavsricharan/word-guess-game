@@ -10,7 +10,7 @@ function getEmptyWordGrid(): string[] {
   return Array(6).fill("");
 }
 
-function getEmptyResults(): (Result | undefined)[] {
+function getEmptyResults(): Result[] {
   return Array(6);
 }
 
@@ -70,6 +70,6 @@ export default function Game() {
         <button className="primary" onClick={reset}>New game</button>
       </div>
       )}
-    {wordGuessService.canGuess && <KeyboardInput input={input} onChange={onChange} onSubmit={onSubmit} />}
+    {wordGuessService.canGuess && <KeyboardInput input={input} results={results} onChange={onChange} onSubmit={onSubmit} />}
   </main>;
 }

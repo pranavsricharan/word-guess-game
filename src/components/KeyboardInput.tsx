@@ -1,6 +1,7 @@
 import React from "react";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
+import Result, { LetterStatus } from "../model/Result";
 import "./KeyboardInput.css";
 
 const BACKSPACE = "{bksp}"
@@ -21,11 +22,18 @@ const DISPLAY = {
 
 type Props = {
   input: string,
+  results: Result[]
   onChange: (letter: string) => void,
   onSubmit: (letter: string) => void,
 };
 
-export default function KeyboardInput({ onChange, onSubmit, input }: Props) {
+export default function KeyboardInput({ onChange, onSubmit, input, results }: Props) {
+  const disabledKeys = results
+    .filter(result => !!result)
+    .flatMap(result => result.letters)
+    .filter(letterResult =>  !!letterResult && letterResult.status === LetterStatus.NOT_PRESENT)
+    .map(letterResult => letterResult!.letter.toUpperCase());
+
   const onKeyPress = (key: string) => {
     switch(key) {
       case ENTER:
@@ -40,16 +48,24 @@ export default function KeyboardInput({ onChange, onSubmit, input }: Props) {
         onChange(input);
         break;
       default:
-        if (input.length < 5) {
+        if (input.length < 5 && !disabledKeys.includes(key.toUpperCase())) {
           input += key;
           onChange(input);
         }
         break;
     }
   }
+
+  const buttonTheme = [
+    {
+      class: "disabled-input",
+      buttons: disabledKeys.join(" ")
+    }
+  ]
   return <Keyboard
     layout={LAYOUT}
     display={DISPLAY}
     onKeyPress={onKeyPress}
+    buttonTheme = {buttonTheme}
     theme={"hg-theme-default dark-theme"} />;
 }

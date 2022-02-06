@@ -4,6 +4,9 @@ This is a simple react app to try and create something similar to the popular Wo
 ## Disclaimer
 This game is in no way associated with the original Wordle game. This is purely made for learning purposes. No copyright infringement intended. [Link to the original Wordle game](https://www.powerlanguage.co.uk/wordle/). 
 
+## Credits
+Word list generated from a subset of the English words list provided by https://github.com/dwyl/english-words/
+
 ## Available Scripts
 
 In the project directory, you can run:

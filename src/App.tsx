@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import About from './components/About';
+import Game from './components/Game';
 import Header from './components/Header';
 
 function App() {
@@ -10,11 +11,11 @@ function App() {
     <div className="app">
       <Header></Header>
         {gameStarted 
-          ? (<strong>Game here</strong>)
+          ? (<Game/>)
           : (
             <main className="vertical-center">
               <About></About>
-              <button className="start-game" onClick={startGame}>Start</button>
+              <button className="primary" onClick={startGame}>Start</button>
             </main>
           )
         }

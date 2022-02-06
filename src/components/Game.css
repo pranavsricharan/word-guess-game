@@ -1,0 +1,11 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  justify-content: space-between;
+}
+
+.game-result-container {
+  margin: 16px 0;
+  flex: 1
+}

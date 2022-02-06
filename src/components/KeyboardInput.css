@@ -1,0 +1,23 @@
+.simple-keyboard.dark-theme {
+  background-color: #1e232b;
+  border-radius: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 100vw;
+}
+
+.simple-keyboard.dark-theme .hg-button {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1e232b;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #293241;
+  margin: 0;
+}
+
+.simple-keyboard.dark-theme .hg-row .hg-button:not(:last-child) {
+  margin-right: 1px;
+}

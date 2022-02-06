@@ -1,0 +1,32 @@
+.game-grid-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.game-grid-row div {
+  width: 50px;
+  height: 50px;
+  background: #1e232b;
+  margin-top: 4px;
+  margin-left: 4px;
+  border-radius: 5px;
+  line-height: 50px;
+  font-size: 18px;
+}
+
+.game-grid-row div:first-of-type {
+  margin-left: 0;
+}
+
+.game-grid-row div.correct {
+  background: rgb(43, 145, 43);
+}
+
+.game-grid-row div.incorrect-position {
+  background-color: rgb(162, 162, 31);
+}
+
+.game-grid-row div.not-present {
+  background-color: rgb(231, 45, 45);
+}

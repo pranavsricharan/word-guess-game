@@ -1,0 +1,7 @@
+.game-result .correct {
+  color: rgb(43, 145, 43);
+}
+
+.game-result .wrong {
+  color: rgb(231, 45, 45);
+}

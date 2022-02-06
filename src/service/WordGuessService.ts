@@ -23,7 +23,7 @@ class WordGuessService {
     }
     this.attempts++;
 
-    if (guessWord === this.typeSafeWord) {
+    if (guessWord.toUpperCase() === this.typeSafeWord.toUpperCase()) {
       const result = Result.correct(this.typeSafeWord);
       delete this.word;
       return result;
@@ -64,7 +64,8 @@ class WordGuessService {
   }
 
   public get canGuess() {
-    return this.attempts < MAX_ATTEMPTS;
+    console.log(this.attempts, this.word, this.attempts < MAX_ATTEMPTS && !!this.word)
+    return this.attempts < MAX_ATTEMPTS && !!this.word;
   }
 }
 

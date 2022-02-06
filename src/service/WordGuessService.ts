@@ -64,7 +64,6 @@ class WordGuessService {
   }
 
   public get canGuess() {
-    console.log(this.attempts, this.word, this.attempts < MAX_ATTEMPTS && !!this.word)
     return this.attempts < MAX_ATTEMPTS && !!this.word;
   }
 }

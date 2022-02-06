@@ -42,7 +42,8 @@ export class Result {
     public readonly letters?: LetterResult[]) {}
 
   public static correct(word: string) {
-    return new Result(Answer.correct(word));
+    const letters = word.split("").map(LetterResult.correctPosition)
+    return new Result(Answer.correct(word), letters);
   }
 
   public static wrong(letters: LetterResult[], word?: string) {

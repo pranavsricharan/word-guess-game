@@ -7,6 +7,9 @@ This game is in no way associated with the original Wordle game. This is purely 
 ## Credits
 Word list generated from a subset of the English words list provided by https://github.com/dwyl/english-words/
 
+## Demo
+A live demo of the app can be seen at [https://pranavsricharan.github.io/word-guess-game/]()
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -35,7 +38,8 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## TODO
-- [ ] Create a simple game with unlimited runs
+- [x] Create a simple game with unlimited runs
+- [ ] Add help section
 - [ ] Move the random word generation to a separate backend
 - [ ] Filter out explicit words
 - [ ] Filter out uncommon words

@@ -6,7 +6,7 @@ import GameGridRow from "./GameGridRow";
 import GameResult from "./GameResult";
 import KeyboardInput from "./KeyboardInput";
 
-function getEmptyState(): string[] {
+function getEmptyWordGrid(): string[] {
   return Array(6).fill("");
 }
 
@@ -18,7 +18,7 @@ const wordGuessService = new WordGuessService();
 wordGuessService.next();
 
 export default function Game() {
-  const [wordGrid, setWordGrid] = useState(getEmptyState())
+  const [wordGrid, setWordGrid] = useState(getEmptyWordGrid())
   const [results, setResults] = useState(getEmptyResults());
   const [currentAttempt, setCurrentAttempt] = useState(0);
   const [input, setInput] = useState("");
@@ -47,7 +47,12 @@ export default function Game() {
   } 
 
   const reset = () => {
-    alert('Not implemented');
+    wordGuessService.next();
+    setAnswer(undefined);
+    setCurrentAttempt(0);
+    setInput("");
+    setResults(getEmptyResults());
+    setWordGrid(getEmptyWordGrid());
   };
 
   return <main className="game">
@@ -61,7 +66,7 @@ export default function Game() {
     </div>
     {!wordGuessService.canGuess && (
       <div className="game-result-container">
-        <GameResult result={answer!} />
+        <GameResult result={answer} />
         <button className="primary" onClick={reset}>New game</button>
       </div>
       )}

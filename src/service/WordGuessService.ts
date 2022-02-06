@@ -15,6 +15,7 @@ class WordGuessService {
 
   next() {
     this.word = this.wordGenerationService.nextWord();
+    this.attempts = 0;
   }
 
   guess(guessWord: string): Result {

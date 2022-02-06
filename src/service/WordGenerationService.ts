@@ -1,4 +1,4 @@
-import * as wordList from "../data/five_letter_words.json";
+import wordList from "../data/five_letter_words.json";
 
 class WordGenerationService {
   private seen: string[];

@@ -41,9 +41,8 @@ class WordGuessService {
 
   private compareLetters(guessWord: string) {
     const lettersResult: LetterResult[] = []
-    const wordCharacters = this.typeSafeWord.split("")
-    const guessWordCharacters = guessWord.split("")
-
+    const wordCharacters = this.typeSafeWord.toUpperCase().split("")
+    const guessWordCharacters = guessWord.toUpperCase().split("")
     guessWordCharacters.forEach((letter, index) => {
       if (letter === wordCharacters[index]) {
         lettersResult.push(LetterResult.correctPosition(letter));

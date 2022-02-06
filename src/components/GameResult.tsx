@@ -14,7 +14,7 @@ export default function GameResult({ result }: Props) {
         : <div className="wrong">Wrong answer!</div>
       }
       <h1>{result.word}</h1>
-      <a href={`https://www.dictionary.com/browse/${result.word}`}>Click here</a> for definition.
+      <a href={`https://www.dictionary.com/browse/${result.word}`} target="_blank" rel="noreferrer">Click here</a> for definition.
     </div>
   );
 }

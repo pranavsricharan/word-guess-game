@@ -1,3 +1,7 @@
+.game-result {
+  margin: 16px 0;
+}
+
 .game-result .correct {
   color: rgb(43, 145, 43);
 }

@@ -8,7 +8,7 @@ This game is in no way associated with the original Wordle game. This is purely 
 Word list generated from a subset of the English words list provided by https://github.com/dwyl/english-words/
 
 ## Demo
-A live demo of the app can be seen at [https://pranavsricharan.github.io/word-guess-game/]()
+A live demo of the app can be seen at [https://pranavsricharan.github.io/word-guess-game/](https://pranavsricharan.github.io/word-guess-game/)
 
 ## Available Scripts
 

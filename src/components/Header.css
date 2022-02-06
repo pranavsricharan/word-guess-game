@@ -1,0 +1,23 @@
+
+.app-header {
+  margin-bottom: 32px;
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  border-bottom: 1px solid #3d5a80;
+}
+
+.app-logo {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5em;
+  flex: 1;
+  text-align: center;
+}
+
+.app-header-actions {
+  text-align: right;
+  padding: 0px 16px;
+  position: absolute;
+  right: 0;
+}

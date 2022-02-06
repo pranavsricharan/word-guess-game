@@ -10,8 +10,8 @@ export default function GameResult({ result }: Props) {
   return (
     <div className="game-result">
       {result.status === AnswerStatus.CORRECT 
-        ? <div className="correct">Correct answer!</div>
-        : <div className="wrong">Wrong answer!</div>
+        ? <div className="correct">Splendid! Correct answer</div>
+        : <div className="wrong">Better luck next time!</div>
       }
       <h1>{result.word}</h1>
       <a href={`https://www.dictionary.com/browse/${result.word}`} target="_blank" rel="noreferrer">Click here</a> for definition.

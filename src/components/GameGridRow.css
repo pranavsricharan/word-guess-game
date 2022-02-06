@@ -5,13 +5,13 @@
 }
 
 .game-grid-row div {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   background: #1e232b;
   margin-top: 4px;
   margin-left: 4px;
   border-radius: 5px;
-  line-height: 50px;
+  line-height: 56px;
   font-size: 18px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .game-grid-row div.incorrect-position {
-  background-color: rgb(162, 162, 31);
+  background-color: rgb(182, 182, 34);
 }
 
 .game-grid-row div.not-present {
